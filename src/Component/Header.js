@@ -1,6 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import HeaderLoggedIn from './HeaderLoggedIn'
+import HeaderLoggedOut from './HeaderLoggedOut'
 function Header() {
   return (
     <>
@@ -11,7 +12,7 @@ function Header() {
               ComplexApp
             </Link>
           </h4>
-          <HeaderLoggedIn/>
+          <HeaderLoggedOut/>
         </div>
       </header>
     </>
