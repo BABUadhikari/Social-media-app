@@ -11,6 +11,7 @@ import Home from './Component/Home';
 import About from './Component/About';
 import Terms from './Component/Terms';
 import { useState } from 'react';
+import CreatePost from './Component/CreatePost';
 
 
 function Index() {
@@ -23,12 +24,8 @@ function Index() {
       <BrowserRouter>
         <Header loggedIn={loggedIn} setLoggedIn={setLoggedIn} />
         <Routes>
-          <Route
-            path='/'
-            exact
-            Component={loggedIn ? Home : HomeGuest}>
-
-          </Route>
+          <Route path='/' exact Component={loggedIn ? Home : HomeGuest}> </Route>
+          <Route path='/create-post' Component={CreatePost}> </Route>
           <Route path='/terms' Component={Terms}></Route>
           <Route path='/about-us' Component={About}></Route>
         </Routes>
